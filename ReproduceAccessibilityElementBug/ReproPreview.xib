@@ -37,7 +37,7 @@
                                 <outlet property="delegate" destination="-1" id="z1W-LM-On8"/>
                             </connections>
                         </collectionView>
-                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="MOc-y6-0Sl">
+                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="MOc-y6-0Sl">
                             <rect key="frame" x="0.0" y="220" width="414" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="nkn-fw-2hN"/>
