@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Events Setup View Controller-->
+        <scene sceneID="21L-Hb-436">
+            <objects>
+                <viewController storyboardIdentifier="EventsSetupViewController" id="pF9-y7-LHR" customClass="EventsSetupViewController" customModule="Penske_Dev" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cXg-fD-2An">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hBM-Js-vYn">
+                                <rect key="frame" x="0.0" y="79" width="414" height="783"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ozs-fK-s8Z">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="783"/>
+                                        <color key="backgroundColor" name="View Background"/>
+                                    </containerView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ozs-fK-s8Z" secondAttribute="bottom" id="EX7-ot-KwF"/>
+                                    <constraint firstAttribute="trailing" secondItem="ozs-fK-s8Z" secondAttribute="trailing" id="Uvs-aM-V6l"/>
+                                    <constraint firstItem="ozs-fK-s8Z" firstAttribute="leading" secondItem="hBM-Js-vYn" secondAttribute="leading" id="iGq-4g-plt"/>
+                                    <constraint firstItem="ozs-fK-s8Z" firstAttribute="top" secondItem="hBM-Js-vYn" secondAttribute="top" id="sSm-WJ-4wy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Q1v-u6-RMf"/>
+                        <color key="backgroundColor" name="View Background"/>
+                        <constraints>
+                            <constraint firstItem="hBM-Js-vYn" firstAttribute="leading" secondItem="Q1v-u6-RMf" secondAttribute="leading" id="01o-1X-IGO"/>
+                            <constraint firstItem="hBM-Js-vYn" firstAttribute="top" secondItem="Q1v-u6-RMf" secondAttribute="top" constant="35" id="6et-ay-1av"/>
+                            <constraint firstItem="Q1v-u6-RMf" firstAttribute="bottom" secondItem="hBM-Js-vYn" secondAttribute="bottom" id="Jm4-2Q-PCl"/>
+                            <constraint firstItem="Q1v-u6-RMf" firstAttribute="trailing" secondItem="hBM-Js-vYn" secondAttribute="trailing" id="pvr-ZL-afh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerEventSetupView" destination="ozs-fK-s8Z" id="TrD-9A-TwF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0lq-CR-Dt8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-98.550724637681171" y="245.08928571428569"/>
+        </scene>
+        <!--Events Setup Table View Controller-->
+        <scene sceneID="mSW-DR-HRL">
+            <objects>
+                <tableViewController storyboardIdentifier="EventsSetupTableViewController" id="Bj8-Lu-aoS" customClass="EventsSetupTableViewController" customModule="Penske_Dev" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="60" sectionFooterHeight="-1" estimatedSectionFooterHeight="50" id="eGq-TH-Onz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="View Background"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="Ptj-ya-pCl" userLabel="Table Footer View" customClass="EventsSetupTableFooterView" customModule="Penske_Dev" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </view>
+                        <connections>
+                            <outlet property="dataSource" destination="Bj8-Lu-aoS" id="8wG-h2-7pw"/>
+                            <outlet property="delegate" destination="Bj8-Lu-aoS" id="cZs-IR-xA6"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="tableFooterView" destination="Ptj-ya-pCl" id="xOa-3O-tfy"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R7l-wI-ueI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="736" y="245"/>
+        </scene>
+        <!--Odometer Table View Controller-->
+        <scene sceneID="zLg-wg-fTQ">
+            <objects>
+                <tableViewController storyboardIdentifier="OdometerTableViewController" id="Dd7-sF-NBA" customClass="OdometerTableViewController" customModule="Penske_Dev" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="60" sectionFooterHeight="-1" estimatedSectionFooterHeight="50" id="rQz-f4-CHK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="View Background"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="v1n-HJ-1Un" userLabel="Table Footer View" customClass="EventsSetupTableFooterView" customModule="Penske_Dev" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </view>
+                        <connections>
+                            <outlet property="dataSource" destination="Dd7-sF-NBA" id="wil-jk-iuP"/>
+                            <outlet property="delegate" destination="Dd7-sF-NBA" id="dTg-th-Ls8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="yXd-jX-P5O"/>
+                    <connections>
+                        <outlet property="tableFooterOdometerView" destination="v1n-HJ-1Un" id="5xR-F9-ouO"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="56N-e9-lmc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-99" y="946"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="View Background">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
